@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/crsten/datepickk.git"
+    "url": "https://github.com/storekeeper-company/datepickk.git"
   },
   "keywords": [
     "datepicker",
@@ -23,7 +23,7 @@
     "flexbox"
   ],
   "bugs": {
-    "url": "https://github.com/crsten/datepickk/issues"
+    "url": "https://github.com/storekeeper-company/datepickk/issues"
   },
   "author": "Carsten Jacobsen",
   "license": "MIT",
