@@ -1,8 +1,17 @@
 /*Main color*/
-@color: #E95A5A; //change if you want different theme
-@green: #7DD076;
+@color: #c2cccf; //change if you want different theme
+@green: #00a3e2;
 
 @spin: -15;
+
+/* Customisations */
+body #Datepickk .d-confirm {
+	margin: 0;
+	width: 100%;
+	max-width: 500px;
+	padding: 10px;
+	background-color: @green;
+}
 
 /*Datepickk*/
 
@@ -18,20 +27,20 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	z-index: 999;
+	z-index: 9999;
 
 	width: 100%;
 	height: 100%;
 	font-family: inherit;
 	color: #333;
 
-    user-select: none;
+	user-select: none;
 
-    &.MSIE:not(.wrapped):not(.inline) .d-calendar{
-    	height:560px;
-    }
+	&.MSIE:not(.wrapped):not(.inline) .d-calendar{
+		height:560px;
+	}
 
-    &.d-show{
+	&.d-show{
 		.d-overlay{
 			animation-name: show;
 			animation-duration: .2s;
@@ -44,16 +53,16 @@
 
 		& > *{
 			animation-name: DatepickkHide;
-		    animation-duration: .2s;
-		    animation-timing-function: linear;
-		    animation-fill-mode: both;
+			animation-duration: .2s;
+			animation-timing-function: linear;
+			animation-fill-mode: both;
 		}
 
 		.d-overlay{
 			animation-name: show;
-	        animation-duration: .15s;
-	        animation-timing-function: ease-out;
-	        animation-fill-mode: both;
+			animation-duration: .15s;
+			animation-timing-function: ease-out;
+			animation-fill-mode: both;
 			animation-direction: reverse;
 		}
 	}
@@ -117,15 +126,15 @@
 
 			&:before{
 				content: attr(data-month);
-			    text-align: right;
-			    width: 100%;
-			    font-size: 1em;
-			    padding: 5px 10px 5px 0;
-			    box-sizing: border-box;
-			    color: #CCC;
-			    position: absolute;
-			    left: 0;
-			    top: 0;
+				text-align: right;
+				width: 100%;
+				font-size: 1em;
+				padding: 5px 10px 5px 0;
+				box-sizing: border-box;
+				color: #CCC;
+				position: absolute;
+				left: 0;
+				top: 0;
 			}
 		}
 	}
@@ -164,19 +173,19 @@
 
 	&.fullscreen{
 		.d-calendar{
-				max-width: none;
-				max-height: none;
+			max-width: none;
+			max-height: none;
 
-				input + label{
-					outline: 1px solid #eaeaea;
-					box-sizing: border-box;
-					align-items:flex-start!important;
-					justify-content: flex-end!important;
+			input + label{
+				outline: 1px solid #eaeaea;
+				box-sizing: border-box;
+				align-items:flex-start!important;
+				justify-content: flex-end!important;
 
-					text{
-						padding:5px 10px 0 0;
-					}
+				text{
+					padding:5px 10px 0 0;
 				}
+			}
 		}
 
 		.d-legend{
@@ -240,21 +249,21 @@
 
 	.d-header{
 		position: relative;
-		background-color: #1B363F;
+		background-color: #00a3e2;
 		color: white;
 		font-size: 1.5em;
 
-  		p{
-  			margin: .5em 0;
-  			text-align: center;
-  		}
+		p{
+			margin: .5em 0;
+			text-align: center;
+		}
 
-  		i{
-  			position: absolute;
-  			top: 50%;
-  			width: 30px;
-  			height:30px;
-  			cursor:pointer;
+		i{
+			position: absolute;
+			top: 50%;
+			width: 30px;
+			height:30px;
+			cursor:pointer;
 			text-align: center;
 			border-radius: 100%;
 			transition: background-color .2s ease;
@@ -262,19 +271,19 @@
 
 			&:before,&:after{
 				content: '';
-			    width: 0;
-			    height: 0;
-			    position: absolute;
+				width: 0;
+				height: 0;
+				position: absolute;
 			}
 
 			&:before{
 				border-top: 10px solid rgba(0, 0, 0, 0);
-			    border-bottom: 10px solid rgba(0, 0, 0, 0);
+				border-bottom: 10px solid rgba(0, 0, 0, 0);
 			}
 
 			&:after{
-			    border-top: 7px solid rgba(0, 0, 0, 0);
-			    border-bottom: 7px solid rgba(0, 0, 0, 0);
+				border-top: 7px solid rgba(0, 0, 0, 0);
+				border-bottom: 7px solid rgba(0, 0, 0, 0);
 				transition: border-color .2s ease;
 			}
 
@@ -282,14 +291,14 @@
 				left:20px;
 				&:before{
 					border-right: 10px solid #FFF;
-			    	top: 5px;
-		    		left: 7px;
+					top: 5px;
+					left: 7px;
 				}
 
 				&:after{
-					border-right: 7px solid #1B363F;
-			    	top: 8px;
-			    	left: 10px;
+					border-right: 7px solid #FFF;
+					top: 8px;
+					left: 10px;
 				}
 			}
 
@@ -298,24 +307,15 @@
 				&:before{
 					border-left: 10px solid #FFF;
 					top: 5px;
-		    		left: 12px;
+					left: 12px;
 				}
 				&:after{
-					border-left: 7px solid #1B363F;
-				    top: 8px;
-			   		left: 12px;
+					border-left: 7px solid #FFF;
+					top: 8px;
+					left: 12px;
 				}
 			}
-
-  			&:hover{
-				background-color: #5E7178;
-
-				&:after{
-					border-left-color: #5E7178!important;
-					border-right-color: #5E7178!important;
-				}
-  			}
-  		}
+		}
 	}
 
 	.d-month{
@@ -404,47 +404,47 @@
 	.d-week{
 		background-color:@color;
 		color:contrast(@color,black,white);
-  		display: flex;
-  		width: 100%;
+		display: flex;
+		width: 100%;
 
-  		& + .d-week{
-  			border-left:1px solid rgba(255,255,255,0.05);
-  		}
+		& + .d-week{
+			border-left:1px solid rgba(255,255,255,0.05);
+		}
 
-  		& > div{
-  			flex-basis: calc(100% ~"/" 7);
-  			text-align: center;
+		& > div{
+			flex-basis: calc(100% ~"/" 7);
+			text-align: center;
 
-  			p{
-  				margin:.8em 0;
-  			}
-  		}
+			p{
+				margin:.8em 0;
+			}
+		}
 
-  		@media(max-height: 540px){
-  			display: none;
-  		}
+		@media(max-height: 540px){
+			display: none;
+		}
 	}
 
 	.d-table{
 		width: 100%;
-	    display: flex;
-	    flex-wrap: wrap;
-	    flex: 1;
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1;
 
-	    &:first-child:nth-last-child(n + 3),&:first-child:nth-last-child(n + 3) ~ div{
+		&:first-child:nth-last-child(n + 3),&:first-child:nth-last-child(n + 3) ~ div{
 			flex:0;
 			flex-basis: calc(100% ~"/" 3 ~"-" 1px);/*-1px due to browser render*/
 
 			border-bottom:1px solid rgba(0,0,0,0.05);
-	    }
+		}
 
-	    label:nth-of-type(7n) .d-date-legends{
+		label:nth-of-type(7n) .d-date-legends{
 			padding-right:0;
-	    }
+		}
 
-	    label:nth-last-of-type(-n + 7) .d-date-legends{
-	    	padding-bottom:0;
-	    }
+		label:nth-last-of-type(-n + 7) .d-date-legends{
+			padding-bottom:0;
+		}
 
 		input{
 
@@ -460,19 +460,19 @@
 				transition: background-color .2s ease,background .2s ease,color .2s ease;
 				position: relative;
 				-webkit-tap-highlight-color: rgba(0,0,0,0);
-					box-sizing: border-box;
+				box-sizing: border-box;
 
-					text{
-						z-index: 9;
-						pointer-events: none;
-						position: relative;
-					}
+				text{
+					z-index: 9;
+					pointer-events: none;
+					position: relative;
+				}
 
-					&[style*="linear-gradient"] text{
-						text-shadow: 0 0 20px black;
-					}
+				&[style*="linear-gradient"] text{
+					text-shadow: 0 0 20px black;
+				}
 
-					&.today text:before{
+				&.today text:before{
 					content: '';
 					width: 100%;
 					height: 2px;
@@ -480,7 +480,7 @@
 					position: absolute;
 					bottom: -5px;
 					left: 0;
-					}
+				}
 
 				&:before{
 					content: '';
@@ -517,8 +517,8 @@
 					color:#ccc;
 				}
 
-  				[data-tooltip]{
-  					&:after{
+				[data-tooltip]{
+					&:after{
 						content: '';
 						border-radius: 100%;
 						background-color: #1B363F;
@@ -528,10 +528,10 @@
 						top: 0;
 						right: -10px;
 					}
-  				}
+				}
 
 
-  				.d-tooltip{
+				.d-tooltip{
 					position: absolute;
 					background-color: #1B363F;
 					color: #FFF;
@@ -555,21 +555,21 @@
 						margin-left: -5px;
 					}
 
-  					&:empty{
-  						display: none!important;
-  					}
-  				}
+					&:empty{
+						display: none!important;
+					}
+				}
 
-  				&:hover {
-  					.d-tooltip{
-  						display: block;
-  					}
-  				}
+				&:hover {
+					.d-tooltip{
+						display: block;
+					}
+				}
 			}
 
 			&:checked {
 				& + label{
-					color:contrast(@color,white,#666);
+					color: #FFF;
 
 					&:before{
 						transform:scaleX(1);
@@ -589,8 +589,8 @@
 					height: 2px;
 					z-index: 10;
 					background-color: #c60000;
-						transform-origin: center;
-						transform: rotate(-25deg);
+					transform-origin: center;
+					transform: rotate(-25deg);
 				}
 
 			}
@@ -615,8 +615,8 @@
 
 		&:not(.locked){
 			input:not(:checked) + label:not(.hidden):hover{
-  					color: #222;
-  					background-color:#eaeaea;
+				color: #222;
+				background-color:#eaeaea;
 			}
 		}
 
@@ -628,7 +628,7 @@
 			&:not(.before) input:not(.single){
 				&:checked {
 					& + label{
-						color:contrast(@color,white,#222);
+						color: #FFF;
 
 						& ~ label:not(.hidden){
 							color:contrast(@color,white,#222);
@@ -645,7 +645,7 @@
 						&:before{
 							transform:scaleX(0);
 						}
-						color:#666;
+						color:#000;
 
 						&.next,&.prev{
 							color: contrast(@color,#ccc,#222);
@@ -654,7 +654,7 @@
 
 					& ~ input:checked + label{
 
-						color:contrast(@color,white,#666);
+						color: #FFFFFF;
 
 						&:before{
 							transform:scaleX(1);
@@ -702,10 +702,10 @@
 	}
 
 	.d-fadeInUp {
-	  backface-visibility: visible !important;
-	  animation-name: DatepickfadeInUp;
-	  animation-duration: .5s;
-	  animation-fill-mode: both;
+		backface-visibility: visible !important;
+		animation-name: DatepickfadeInUp;
+		animation-duration: .5s;
+		animation-fill-mode: both;
 	}
 }
 
@@ -716,19 +716,19 @@
 }
 
 @keyframes DatepickfadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 .d-fadeInUp {
-  animation-name: DatepickfadeInUp;
+	animation-name: DatepickfadeInUp;
 }
 
 #Datepickk.d-show > *{

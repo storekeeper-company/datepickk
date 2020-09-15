@@ -1,7 +1,8 @@
 {
-  "name": "datepickk",
+  "name": "@storekeeper/datepickk",
   "description": "Flexbox/js datepicker",
   "main": "src/js/datepickk.js",
+  "version": "1.5.1",
   "directories": {
     "doc": "docs"
   },
